@@ -21,7 +21,7 @@ jobs:
       - name: Install dependencies
         shell: bash
         run: |
-          sudo apt install -y cmake ninja
+          sudo apt install -y cmake ninja-build
 
       - name: Setup python
         uses: actions/setup-python@v5
