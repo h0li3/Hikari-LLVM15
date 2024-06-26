@@ -18,15 +18,15 @@ jobs:
           ref: "llvm-17.0.6rel"
           submodules: "recursive"
 
+      - name: Install dependencies
+        shell: bash
+        run: |
+          sudo apt install -y cmake ninja
+
       - name: Setup python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-
-      - name: Install dependencies
-        shell: bash
-        run: |
-          apt install -y cmake ninja
       
       - name: Build
         shell: bash
